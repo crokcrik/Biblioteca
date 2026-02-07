@@ -3,6 +3,7 @@ package com.example.Biblioteca.controller;
 import com.example.Biblioteca.model.Category;
 import com.example.Biblioteca.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
