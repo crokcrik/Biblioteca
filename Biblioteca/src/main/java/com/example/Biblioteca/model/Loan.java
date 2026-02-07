@@ -1,5 +1,6 @@
 package com.example.Biblioteca.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDate;
@@ -19,6 +20,7 @@ public class Loan {
 
     @ManyToOne
     @JoinColumn(name = "book_id", nullable = false)
+    @JsonBackReference
     private Book book;
 
     private LocalDate loanDate;

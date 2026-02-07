@@ -1,5 +1,6 @@
 package com.example.Biblioteca.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -42,5 +43,6 @@ public class Book {
     private Category category;
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Loan> loans = new ArrayList<>();
 }
