@@ -43,6 +43,6 @@ public class Book {
     private Category category;
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
+    @JsonManagedReference // Indica che questa è la parte "principale" della relazione
     private List<Loan> loans = new ArrayList<>();
 }

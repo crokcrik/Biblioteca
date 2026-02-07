@@ -20,7 +20,7 @@ public class Loan {
 
     @ManyToOne
     @JoinColumn(name = "book_id", nullable = false)
-    @JsonBackReference
+    @JsonBackReference // Indica che questa parte deve essere ignorata nel JSON per evitare il loop
     private Book book;
 
     private LocalDate loanDate;
